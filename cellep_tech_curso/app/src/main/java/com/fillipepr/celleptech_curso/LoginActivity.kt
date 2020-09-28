@@ -1,5 +1,6 @@
 package com.fillipepr.celleptech_curso
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -24,9 +25,19 @@ class LoginActivity : AppCompatActivity() {
                 edtLoginPassword.error =  "Campo obrigatório";
                 edtLoginPassword.requestFocus();
             } else {
-                if( email == "teste@teste.com" && password == "1234"){
+
+                //acessando o arquivo do shared preferences
+                val sharedPrefs = getSharedPreferences("cadastro_$email", Context.MODE_PRIVATE)
+                //recuperando os dados no arquivo shared preferences
+                val emailPrefs = sharedPrefs.getString("EMAIL","")
+                val senhaPrefs = sharedPrefs.getString("SENHA", "")
+
+                if(
+
+                    email == emailPrefs && password == senhaPrefs){
                     //exibindo um alerta sutil ao usuário com toast
                     Toast.makeText(this, "Usuário Logado", Toast.LENGTH_SHORT ).show();
+                    //acessando main
                     val nIntent = Intent(this, MainActivity::class.java)
                     startActivity(nIntent);
                     finish();
@@ -38,7 +49,6 @@ class LoginActivity : AppCompatActivity() {
         }
         //criando um listner para o botão de cadastro
         btnLoginSign.setOnClickListener {
-
             val nIntent = Intent(this, SignupActivity::class.java);
             startActivity(nIntent);
 
