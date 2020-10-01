@@ -1,6 +1,7 @@
 package com.fillipepr.healthtrack
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -33,13 +34,25 @@ class ResultActivity : AppCompatActivity() {
             }else "OBESIDADE MÓRBIDA"
 
         }
-
+        //lançando msg de alerta
         val aviso:String = msgAviso(imcR.toString())
-
         Toast.makeText(this, aviso, Toast.LENGTH_LONG ).show();
 
+        //imprimindo resultado na tela
         txvResultResult.text = imcR.toString()
 
+        //configurando botões
+            //botão de retorno/refresh
+        btnResultNext.setOnClickListener {
+            val nIntent = Intent(this, MainActivity::class.java)
+            startActivity(nIntent);
+            finish();
+        }
+        btnResultNext.setOnClickListener {
+            val nIntent = Intent(this, WebActivity::class.java)
+            startActivity(nIntent);
+            finish();
+        }
 
 
     }

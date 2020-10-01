@@ -92,7 +92,7 @@
         app:srcCompat="@drawable/ic_btnmidnext" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/btnResultReturn"
         android:layout_width="109dp"
         android:layout_height="63dp"
         android:layout_marginStart="64dp"
