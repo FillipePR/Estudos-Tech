@@ -39,8 +39,10 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this, "Usuário Logado", Toast.LENGTH_SHORT ).show();
                     //acessando main
                     val nIntent = Intent(this, MainActivity::class.java)
+                    nIntent.putExtra("INTENT_EMAIL", email)
                     startActivity(nIntent);
                     finish();
+
                 } else {
 
                     Toast.makeText(this, "Usuário ou Senha inválidos", Toast.LENGTH_LONG).show();

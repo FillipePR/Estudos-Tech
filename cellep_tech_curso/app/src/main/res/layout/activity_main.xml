@@ -8,18 +8,23 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnMainSite"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="100dp"
-        android:text="Button"
+        android:fontFamily="monospace"
+        android:text="site"
+        android:textAlignment="center"
+        android:textColor="@color/colorBackground"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/btnMainClose"
         app:layout_constraintVertical_bias="0.131" />
 
     <TextView
@@ -29,76 +34,86 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
+        android:fontFamily="monospace"
         android:text="Seja Bem Vindo(a)"
         android:textAlignment="textStart"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintBottom_toTopOf="@+id/txvMainName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txvMainEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:fontFamily="monospace"
         android:hint="Email"
         android:textAlignment="textStart"
         android:textColor="@android:color/white"
         android:textColorHint="#CCFFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txvMainGender"
+        app:layout_constraintEnd_toEndOf="@+id/txvMainName"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintStart_toStartOf="@+id/txvMainName"
+        app:layout_constraintTop_toBottomOf="@+id/txvMainName" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txvMainName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:fontFamily="monospace"
         android:hint="Nome Completo"
         android:textAlignment="textStart"
         android:textColor="@android:color/white"
         android:textColorHint="#CCFFFFFF"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintBottom_toTopOf="@+id/txvMainEmail"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txvMainGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:fontFamily="monospace"
         android:hint="Gênero"
         android:textAlignment="textStart"
         android:textColor="@android:color/white"
         android:textColorHint="#CCFFFFFF"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintBottom_toTopOf="@+id/btnMainClose"
+        app:layout_constraintEnd_toEndOf="@+id/txvMainEmail"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintStart_toStartOf="@+id/txvMainEmail"
+        app:layout_constraintTop_toBottomOf="@+id/txvMainEmail" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnMainClose"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="100dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        android:fontFamily="monospace"
+        android:text="sair"
+        android:textAlignment="center"
+        android:textColor="@color/colorBackground"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnMainSite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/txvMainGender" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
