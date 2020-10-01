@@ -43,11 +43,12 @@ class ResultActivity : AppCompatActivity() {
 
         //configurando botões
             //botão de retorno/refresh
-        btnResultNext.setOnClickListener {
+        btnResultReturn.setOnClickListener {
             val nIntent = Intent(this, MainActivity::class.java)
             startActivity(nIntent);
             finish();
         }
+            //botão de próximos passos
         btnResultNext.setOnClickListener {
             val nIntent = Intent(this, WebActivity::class.java)
             startActivity(nIntent);
